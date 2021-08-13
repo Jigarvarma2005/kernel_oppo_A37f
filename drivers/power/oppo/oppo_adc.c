@@ -185,7 +185,6 @@ int opchg_get_prop_battery_voltage_now(struct opchg_charger *chip)
 		if(is_project(OPPO_15109)||is_project(OPPO_15399))
 		{
 		     V_battery += 25*1000;
-			#endif /* VENDOR_EDIT */
 		}
 	}
 	else if(is_project(OPPO_14005) || is_project(OPPO_15011) || is_project(OPPO_15018)|| is_project(OPPO_15022))
