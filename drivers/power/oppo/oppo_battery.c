@@ -1143,7 +1143,7 @@ void opchg_check_recharging_voltage(struct opchg_charger *chip)
 		}
 		else if(chip->charging_opchg_temp_statu == OPCHG_CHG_TEMP_PRE_COOL1)
 		{
-			if(chip->bat_instant_vol < 4100 * 1000)
+			if(chip->bat_instant_vol < 4150 * 1000)
 				vol_low_count++;
 			else
 				vol_low_count = 0;
