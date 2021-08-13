@@ -53,7 +53,8 @@ int opchg_get_prop_charger_voltage_now(struct opchg_charger *chip)
 			        return 0;
 			    }
 			    V_charger = (int)results.physical/1000;
-                            V_charger = V_charger * 2;
+                           	V_charger = V_charger * 2 ;			
+				V_charger += 120 ;
 				break;
 			}
 
@@ -183,7 +184,8 @@ int opchg_get_prop_battery_voltage_now(struct opchg_charger *chip)
 		//battery voltage sampling Compensation
 		if(is_project(OPPO_15109)||is_project(OPPO_15399))
 		{
-				V_battery += 20*1000;
+		     V_battery += 25*1000;
+			#endif /* VENDOR_EDIT */
 		}
 	}
 	else if(is_project(OPPO_14005) || is_project(OPPO_15011) || is_project(OPPO_15018)|| is_project(OPPO_15022))
